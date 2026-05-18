@@ -12,14 +12,19 @@ export async function POST(req: Request) {
     const response = await openai.chat.completions.create({
       model: "gpt-4o-mini",
       messages: [
-        { 
-          role: "system", 
-          content: "You are an expert JVZoo Product Reviewer. Use the product name from the URL to write a persuasive affiliate review with pros, cons and a verdict." 
+        {
+          role: "system",
+          content: `You are an expert affiliate marketer. Generate a killer product review. 
+          STRICT RULES: 
+          1. NO MARKDOWN (No #, No *, No -, No _). 
+          2. USE ALL CAPS FOR HEADINGS. 
+          3. DOUBLE SPACE BETWEEN PARAGRAPHS.
+          4. NO LIST BULLETS.`
         },
-        { 
-          role: "user", 
-          content: `Analyze this link and write a killer review: ${url}` 
-        }
+        {
+          role: "user",
+          content: `Analyze this link and write a professional review in plain text: ${url}`
+        },
       ],
     });
 
