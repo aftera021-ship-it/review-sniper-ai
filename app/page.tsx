@@ -14,14 +14,15 @@ export default function Home() {
       padding: '20px',
       textAlign: 'center'
     }}>
-      <header style={{ marginBottom: '40px' }}>
-        <h1 style={{ fontSize: '3rem', fontWeight: 'bold', color: '#ffcc00', marginBottom: '10px' }}>
-          🎯 Review Sniper AI
-        </h1>
-        <p style={{ fontSize: '1.2rem', color: '#aaa' }}>
-          The Ultimate AI Agent for Digital Product Evaluation
-        </p>
-      </header>
+      <header style={{ marginBottom: '40px', width: '100%', maxWidth: '600px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+  <h1 style={{ fontSize: '1.8rem', fontWeight: 'bold', color: '#fff', margin: 0 }}>
+    ⚡ REVIEW<span style={{ color: '#bfff00' }}>SNIPER</span>
+  </h1>
+  <div style={{ display: 'flex', gap: '15px' }}>
+    <a href="/privacy" style={{ color: '#aaa', fontSize: '0.9rem', textDecoration: 'none' }}>Privacy</a>
+    <a href="/contact" style={{ color: '#aaa', fontSize: '0.9rem', textDecoration: 'none' }}>Contact</a>
+  </div>
+</header>
 
       <main style={{
         maxWidth: '600px',
