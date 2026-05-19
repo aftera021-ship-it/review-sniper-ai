@@ -7,9 +7,9 @@ const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 export async function POST(req: Request) {
   try {
     const { url } = await req.json();
-    let contentToAnalyze = url; // كنفترضو فالبداية أن المستخدم حط نص
+    let contentToAnalyze = url;
 
-    // إلا كان المدخل كيبدأ بـ http، كنمشيو نجيبو النص من الرابط
+    // سكرايبينغ المحتوى من الرابط
     if (url.startsWith("http")) {
       try {
         const webResponse = await fetch(url, {
@@ -28,8 +28,13 @@ export async function POST(req: Request) {
       messages: [
         {
           role: "system",
-          content: `You are an expert affiliate marketer. Write a killer product review based on the provided text. 
-          STRICT RULES: 1. NO MARKDOWN. 2. ALL CAPS HEADINGS. 3. DOUBLE SPACE BETWEEN PARAGRAPHS. 4. NO BULLETS.`
+          content: `You are an expert affiliate marketer. Write a killer product review based on the provided text.
+          STRUCTURE YOUR RESPONSE:
+          1. PRODUCT NAME & OVERVIEW
+          2. KEY BENEFITS (Use clear headings)
+          3. POTENTIAL DRAWBACKS
+          4. FINAL VERDICT & PROFIT POTENTIAL
+          STRICT RULES: 1. NO MARKDOWN. 2. USE ALL CAPS FOR HEADINGS. 3. DOUBLE SPACE BETWEEN PARAGRAPHS. 4. NO BULLETS.`
         },
         { role: "user", content: `Analyze this: ${contentToAnalyze}` },
       ],
