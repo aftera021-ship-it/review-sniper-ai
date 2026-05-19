@@ -15,7 +15,7 @@ export default function Home() {
       textAlign: 'center'
     }}>
       
-      {/* הـ Header الفوقاني مقاد وفيه الروابط باينين */}
+      {/* الـ Header الفوقاني مقاد وفيه الروابط باينين */}
       <header style={{ 
         marginBottom: '60px', 
         width: '100%', 
@@ -52,7 +52,7 @@ export default function Home() {
           Turn any product URL into a killer review in seconds.
         </p>
 
-        {/* الـ Input Box والـ Button د الـ GENERATE الحاضرين فـ التصويرة الأولى */}
+        {/* الـ Input Box والـ Button د الـ GENERATE الحاضرين فـ الديزاين الأصلي */}
         <div style={{ width: '100%', display: 'flex', flexDirection: 'column', gap: '15px' }}>
           <input 
             type="text" 
