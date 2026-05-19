@@ -14,15 +14,25 @@ export default function Home() {
       padding: '20px',
       textAlign: 'center'
     }}>
-      <header style={{ marginBottom: '40px', width: '100%', maxWidth: '600px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-  <h1 style={{ fontSize: '1.8rem', fontWeight: 'bold', color: '#fff', margin: 0 }}>
-    ⚡ REVIEW<span style={{ color: '#bfff00' }}>SNIPER</span>
-  </h1>
-  <div style={{ display: 'flex', gap: '15px' }}>
-    <a href="/privacy" style={{ color: '#aaa', fontSize: '0.9rem', textDecoration: 'none' }}>Privacy</a>
-    <a href="/contact" style={{ color: '#aaa', fontSize: '0.9rem', textDecoration: 'none' }}>Contact</a>
-  </div>
-</header>
+      {/* الـ Header المعدل وفيه الروابط باينين الفوق */}
+      <header style={{ 
+        marginBottom: '40px', 
+        width: '100%', 
+        maxWidth: '600px', 
+        display: 'flex', 
+        justifyContent: 'space-between', 
+        alignItems: 'center',
+        flexWrap: 'wrap',
+        gap: '15px'
+      }}>
+        <h1 style={{ fontSize: '2rem', fontWeight: 'bold', color: '#ffcc00', margin: 0 }}>
+          🎯 Review Sniper AI
+        </h1>
+        <div style={{ display: 'flex', gap: '20px' }}>
+          <a href="/privacy" style={{ color: '#ffffff', fontSize: '0.95rem', textDecoration: 'none', fontWeight: '500' }}>Privacy Policy</a>
+          <a href="/contact" style={{ color: '#ffffff', fontSize: '0.95rem', textDecoration: 'none', fontWeight: '500' }}>Contact Us</a>
+        </div>
+      </header>
 
       <main style={{
         maxWidth: '600px',
@@ -32,17 +42,13 @@ export default function Home() {
         border: '1px solid #222',
         boxShadow: '0 4px 20px rgba(0,0,0,0.5)'
       }}>
-        <p style={{ fontSize: '1.1rem', lineHeight: '1.6', color: '#e0e0e0' }}>
+        <p style={{ fontSize: '1.1rem', lineHeight: '1.6', color: '#e0e0e0', margin: 0 }}>
           Welcome to Review Sniper AI. Our agent is optimizing live launches, analyzing markets, and delivering precision feedback for affiliate networks.
         </p>
       </main>
 
       <footer style={{ marginTop: '60px', fontSize: '0.9rem', color: '#555' }}>
-        <p>&copy; 2026 Review Sniper AI. All rights reserved.</p>
-        <div style={{ marginTop: '10px' }}>
-          <a href="/privacy" style={{ color: '#ffcc00', marginRight: '15px', textDecoration: 'none' }}>Privacy Policy</a>
-          <a href="/contact" style={{ color: '#ffcc00', textDecoration: 'none' }}>Contact Us</a>
-        </div>
+        <p style={{ margin: 0 }}>&copy; 2026 Review Sniper AI. All rights reserved.</p>
       </footer>
     </div>
   );
